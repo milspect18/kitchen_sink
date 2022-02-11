@@ -17,6 +17,8 @@
 		E368A90A27B6E49C00216E53 /* Kitchen_SinkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E368A90927B6E49C00216E53 /* Kitchen_SinkUITests.swift */; };
 		E368A90C27B6E49C00216E53 /* Kitchen_SinkUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E368A90B27B6E49C00216E53 /* Kitchen_SinkUITestsLaunchTests.swift */; };
 		E368A91D27B701CA00216E53 /* MealCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E368A91C27B701CA00216E53 /* MealCategory.swift */; };
+		E368A92027B7036300216E53 /* RecipesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E368A91F27B7036300216E53 /* RecipesView.swift */; };
+		E368A92327B703A100216E53 /* MealPlanningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E368A92227B703A100216E53 /* MealPlanningView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		E368A90927B6E49C00216E53 /* Kitchen_SinkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kitchen_SinkUITests.swift; sourceTree = "<group>"; };
 		E368A90B27B6E49C00216E53 /* Kitchen_SinkUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kitchen_SinkUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E368A91C27B701CA00216E53 /* MealCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCategory.swift; sourceTree = "<group>"; };
+		E368A91F27B7036300216E53 /* RecipesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesView.swift; sourceTree = "<group>"; };
+		E368A92227B703A100216E53 /* MealPlanningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPlanningView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +141,8 @@
 		E368A91827B6EC1F00216E53 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E368A92127B7038F00216E53 /* MealPlanningViews */,
+				E368A91E27B7032200216E53 /* RecipeViews */,
 				E368A8EB27B6E49B00216E53 /* ContentView.swift */,
 			);
 			path = Views;
@@ -166,6 +172,22 @@
 				E368A8ED27B6E49C00216E53 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		E368A91E27B7032200216E53 /* RecipeViews */ = {
+			isa = PBXGroup;
+			children = (
+				E368A91F27B7036300216E53 /* RecipesView.swift */,
+			);
+			path = RecipeViews;
+			sourceTree = "<group>";
+		};
+		E368A92127B7038F00216E53 /* MealPlanningViews */ = {
+			isa = PBXGroup;
+			children = (
+				E368A92227B703A100216E53 /* MealPlanningView.swift */,
+			);
+			path = MealPlanningViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,8 +322,10 @@
 			files = (
 				E368A8F327B6E49C00216E53 /* Persistence.swift in Sources */,
 				E368A8EC27B6E49B00216E53 /* ContentView.swift in Sources */,
+				E368A92327B703A100216E53 /* MealPlanningView.swift in Sources */,
 				E368A91D27B701CA00216E53 /* MealCategory.swift in Sources */,
 				E368A8EA27B6E49B00216E53 /* Kitchen_SinkApp.swift in Sources */,
+				E368A92027B7036300216E53 /* RecipesView.swift in Sources */,
 				E368A8F627B6E49C00216E53 /* Kitchen_Sink.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
