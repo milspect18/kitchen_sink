@@ -16,6 +16,7 @@
 		E368A90027B6E49C00216E53 /* Kitchen_SinkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E368A8FF27B6E49C00216E53 /* Kitchen_SinkTests.swift */; };
 		E368A90A27B6E49C00216E53 /* Kitchen_SinkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E368A90927B6E49C00216E53 /* Kitchen_SinkUITests.swift */; };
 		E368A90C27B6E49C00216E53 /* Kitchen_SinkUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E368A90B27B6E49C00216E53 /* Kitchen_SinkUITestsLaunchTests.swift */; };
+		E368A91D27B701CA00216E53 /* MealCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E368A91C27B701CA00216E53 /* MealCategory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		E368A90527B6E49C00216E53 /* Kitchen SinkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kitchen SinkUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E368A90927B6E49C00216E53 /* Kitchen_SinkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kitchen_SinkUITests.swift; sourceTree = "<group>"; };
 		E368A90B27B6E49C00216E53 /* Kitchen_SinkUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kitchen_SinkUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E368A91C27B701CA00216E53 /* MealCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCategory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 			children = (
 				E368A8F427B6E49C00216E53 /* Kitchen_Sink.xcdatamodeld */,
 				E368A8F227B6E49C00216E53 /* Persistence.swift */,
+				E368A91C27B701CA00216E53 /* MealCategory.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 			files = (
 				E368A8F327B6E49C00216E53 /* Persistence.swift in Sources */,
 				E368A8EC27B6E49B00216E53 /* ContentView.swift in Sources */,
+				E368A91D27B701CA00216E53 /* MealCategory.swift in Sources */,
 				E368A8EA27B6E49B00216E53 /* Kitchen_SinkApp.swift in Sources */,
 				E368A8F627B6E49C00216E53 /* Kitchen_Sink.xcdatamodeld in Sources */,
 			);
