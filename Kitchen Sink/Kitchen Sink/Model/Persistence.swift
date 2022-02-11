@@ -35,7 +35,7 @@ extension PersistenceController {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
         
-        let meal = Meal(context: viewContext)
+        let meal = Recipe(context: viewContext)
         meal.name = "Glass of water"
         meal.details = "A test meal"
         meal.image = nil
@@ -44,10 +44,10 @@ extension PersistenceController {
         let ingredient = Ingredient(context: viewContext)
         ingredient.name = "Water"
         ingredient.quantity = "1/2 cup"
-        ingredient.meal = meal
+        ingredient.recipe = meal
         
         let step = CookingStep(context: viewContext)
-        step.meal = meal
+        step.recipe = meal
         step.stepNum = 0
         step.time = Int64(TimeInterval(3600.0))
         step.details = "Pour water into cup"
