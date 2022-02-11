@@ -98,11 +98,10 @@
 		E368A8E827B6E49B00216E53 /* Kitchen Sink */ = {
 			isa = PBXGroup;
 			children = (
-				E368A8E927B6E49B00216E53 /* Kitchen_SinkApp.swift */,
-				E368A8EB27B6E49B00216E53 /* ContentView.swift */,
-				E368A8ED27B6E49C00216E53 /* Assets.xcassets */,
-				E368A8F227B6E49C00216E53 /* Persistence.swift */,
-				E368A8F427B6E49C00216E53 /* Kitchen_Sink.xcdatamodeld */,
+				E368A91B27B6EC4600216E53 /* Resources */,
+				E368A91A27B6EC2F00216E53 /* App */,
+				E368A91927B6EC2600216E53 /* Model */,
+				E368A91827B6EC1F00216E53 /* Views */,
 				E368A8EF27B6E49C00216E53 /* Preview Content */,
 			);
 			path = "Kitchen Sink";
@@ -131,6 +130,39 @@
 				E368A90B27B6E49C00216E53 /* Kitchen_SinkUITestsLaunchTests.swift */,
 			);
 			path = "Kitchen SinkUITests";
+			sourceTree = "<group>";
+		};
+		E368A91827B6EC1F00216E53 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E368A8EB27B6E49B00216E53 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E368A91927B6EC2600216E53 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E368A8F427B6E49C00216E53 /* Kitchen_Sink.xcdatamodeld */,
+				E368A8F227B6E49C00216E53 /* Persistence.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E368A91A27B6EC2F00216E53 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E368A8E927B6E49B00216E53 /* Kitchen_SinkApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		E368A91B27B6EC4600216E53 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E368A8ED27B6E49C00216E53 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
