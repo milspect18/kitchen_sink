@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E334EEC727B70893009C47B2 /* Recipe+CDHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E334EEC627B70893009C47B2 /* Recipe+CDHelpers.swift */; };
 		E368A8EA27B6E49B00216E53 /* Kitchen_SinkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E368A8E927B6E49B00216E53 /* Kitchen_SinkApp.swift */; };
 		E368A8EC27B6E49B00216E53 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E368A8EB27B6E49B00216E53 /* ContentView.swift */; };
 		E368A8EE27B6E49C00216E53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E368A8ED27B6E49C00216E53 /* Assets.xcassets */; };
@@ -19,6 +20,8 @@
 		E368A91D27B701CA00216E53 /* MealCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E368A91C27B701CA00216E53 /* MealCategory.swift */; };
 		E368A92027B7036300216E53 /* RecipesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E368A91F27B7036300216E53 /* RecipesView.swift */; };
 		E368A92327B703A100216E53 /* MealPlanningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E368A92227B703A100216E53 /* MealPlanningView.swift */; };
+		E368A92627B7041B00216E53 /* RecipeListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E368A92527B7041B00216E53 /* RecipeListItemView.swift */; };
+		E368A92827B704EE00216E53 /* RecipeThumbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E368A92727B704EE00216E53 /* RecipeThumbnailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E334EEC627B70893009C47B2 /* Recipe+CDHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recipe+CDHelpers.swift"; sourceTree = "<group>"; };
 		E368A8E627B6E49B00216E53 /* Kitchen Sink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kitchen Sink.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E368A8E927B6E49B00216E53 /* Kitchen_SinkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kitchen_SinkApp.swift; sourceTree = "<group>"; };
 		E368A8EB27B6E49B00216E53 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,6 +58,8 @@
 		E368A91C27B701CA00216E53 /* MealCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCategory.swift; sourceTree = "<group>"; };
 		E368A91F27B7036300216E53 /* RecipesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesView.swift; sourceTree = "<group>"; };
 		E368A92227B703A100216E53 /* MealPlanningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPlanningView.swift; sourceTree = "<group>"; };
+		E368A92527B7041B00216E53 /* RecipeListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListItemView.swift; sourceTree = "<group>"; };
+		E368A92727B704EE00216E53 /* RecipeThumbnailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeThumbnailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +87,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E334EEC827B70A21009C47B2 /* Recipe */ = {
+			isa = PBXGroup;
+			children = (
+				E334EEC627B70893009C47B2 /* Recipe+CDHelpers.swift */,
+			);
+			path = Recipe;
+			sourceTree = "<group>";
+		};
 		E368A8DD27B6E49B00216E53 = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +165,7 @@
 		E368A91927B6EC2600216E53 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E334EEC827B70A21009C47B2 /* Recipe */,
 				E368A8F427B6E49C00216E53 /* Kitchen_Sink.xcdatamodeld */,
 				E368A8F227B6E49C00216E53 /* Persistence.swift */,
 				E368A91C27B701CA00216E53 /* MealCategory.swift */,
@@ -178,6 +193,8 @@
 			isa = PBXGroup;
 			children = (
 				E368A91F27B7036300216E53 /* RecipesView.swift */,
+				E368A92527B7041B00216E53 /* RecipeListItemView.swift */,
+				E368A92727B704EE00216E53 /* RecipeThumbnailView.swift */,
 			);
 			path = RecipeViews;
 			sourceTree = "<group>";
@@ -320,10 +337,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E334EEC727B70893009C47B2 /* Recipe+CDHelpers.swift in Sources */,
 				E368A8F327B6E49C00216E53 /* Persistence.swift in Sources */,
+				E368A92627B7041B00216E53 /* RecipeListItemView.swift in Sources */,
 				E368A8EC27B6E49B00216E53 /* ContentView.swift in Sources */,
 				E368A92327B703A100216E53 /* MealPlanningView.swift in Sources */,
 				E368A91D27B701CA00216E53 /* MealCategory.swift in Sources */,
+				E368A92827B704EE00216E53 /* RecipeThumbnailView.swift in Sources */,
 				E368A8EA27B6E49B00216E53 /* Kitchen_SinkApp.swift in Sources */,
 				E368A92027B7036300216E53 /* RecipesView.swift in Sources */,
 				E368A8F627B6E49C00216E53 /* Kitchen_Sink.xcdatamodeld in Sources */,
