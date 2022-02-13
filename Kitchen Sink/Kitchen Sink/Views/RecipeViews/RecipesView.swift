@@ -21,6 +21,17 @@ struct RecipesView: View {
                 }
             }
             .navigationTitle("Recipes")
+            .toolbar {
+                ToolbarItem {
+                    HStack {
+                        NavigationLink(destination: NewRecipeView()) {
+                            Image(systemName: "plus")
+                        }
+                        
+                        EditButton()
+                    }
+                }
+            }
         }
     }
 }
