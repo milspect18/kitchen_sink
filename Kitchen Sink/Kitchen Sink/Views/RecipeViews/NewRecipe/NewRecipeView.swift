@@ -42,7 +42,15 @@ struct NewRecipeView: View {
             }
 
             Section {
-                Text("Cooking steps list here")
+                List(vm.instructions) { step in
+                    HStack {
+                        Text("Step \(step.stepNum)")
+                        Spacer()
+                        Divider()
+                        Spacer()
+                        Text(step.timeStr)
+                    }
+                }
             } header: {
                 HStack {
                     Text("Instructions")
