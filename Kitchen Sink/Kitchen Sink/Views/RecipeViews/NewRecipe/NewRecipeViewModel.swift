@@ -23,11 +23,23 @@ class NewRecipeViewModel: ObservableObject {
         self.moc = moc
     }
     
+    var saveDisabled: Bool { return name.isEmpty }
+    
     func save() {
         do {
+            self.createNewRecipe()
             try self.moc.save()
         } catch {
             self.saveError = error
         }
+    }
+    
+    private func createNewRecipe() {
+        let recipe = Recipe(context: self.moc)
+        
+        recipe.name = self.name
+        recipe.details = self.details
+        recipe.ingredients = NSSet(array: self.ingredients)
+        recipe.steps = NSSet(array: self.instructions)
     }
 }

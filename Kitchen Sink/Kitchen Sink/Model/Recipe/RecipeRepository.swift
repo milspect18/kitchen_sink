@@ -33,6 +33,7 @@ final class RecipeRepository: NSObject, NSFetchedResultsControllerDelegate {
             cacheName: nil
         )
         
+        self.controller?.delegate = self
         try self.controller?.performFetch()
         self.fetchedRecipes.send(self.controller?.fetchedObjects ?? [])
     }
@@ -51,6 +52,8 @@ final class RecipeRepository: NSObject, NSFetchedResultsControllerDelegate {
     }
     
     func save() throws {
-        try self.moc.save()
+        if self.moc.hasChanges {
+            try self.moc.save()
+        }
     }
 }

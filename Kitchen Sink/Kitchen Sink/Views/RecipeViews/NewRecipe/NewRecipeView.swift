@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct NewRecipeView: View {
+    @Environment(\.dismiss) private var dismiss
     @StateObject var vm = NewRecipeViewModel()
     
     var body: some View {
@@ -66,6 +67,15 @@ struct NewRecipeView: View {
             }
         }
         .navigationTitle("New Recipe")
+        .toolbar {
+            ToolbarItem {
+                Button("Save") {
+                    vm.save()
+                    dismiss()
+                }
+                .disabled(vm.saveDisabled)
+            }
+        }
     }
 }
 
