@@ -27,6 +27,11 @@ struct RecipesView: View {
 
 struct RecipesView_Previews: PreviewProvider {
     static var previews: some View {
-        RecipesView(vm: RecipesViewModel(moc: PersistenceController.preview.container.viewContext))
+        Group {
+            RecipesView(vm: RecipesViewModel(moc: PersistenceController.preview.container.viewContext))
+            
+            RecipesView(vm: RecipesViewModel(moc: PersistenceController.preview.container.viewContext))
+                .preferredColorScheme(.dark)
+        }
     }
 }
