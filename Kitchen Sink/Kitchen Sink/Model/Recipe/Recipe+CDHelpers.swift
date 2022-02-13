@@ -26,3 +26,8 @@ extension Recipe {
         return recipe
     }
 }
+
+extension Recipe {
+    var nameStr: String { self.name ?? "Unknown" }
+    var detailsStr: String { self.details ?? "" }
+}
