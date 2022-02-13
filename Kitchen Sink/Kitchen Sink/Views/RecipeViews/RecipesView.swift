@@ -8,8 +8,12 @@
 import SwiftUI
 
 struct RecipesView: View {
+    private let recipe = Recipe(context: PersistenceController.viewContext)
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List {
+            RecipeListItemView(recipe: Recipe.example)
+        }
     }
 }
 

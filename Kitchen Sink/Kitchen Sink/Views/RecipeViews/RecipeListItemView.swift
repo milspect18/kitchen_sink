@@ -11,26 +11,31 @@ struct RecipeListItemView: View {
     let recipe: Recipe
     
     var body: some View {
-        NavigationLink(destination: Text(recipe.details ?? "")) {
-            HStack {
-                RecipeThumbnailView(recipe.image ?? Data(), diameter: 60)
+        print(recipe)
+        return HStack {
+            RecipeThumbnailView(recipe.image ?? Data(), diameter: 60)
+            
+            VStack(alignment: .leading, spacing: 4) {
+                Text(recipe.name ?? "None")
+                    .font(.title2)
                 
-                VStack(alignment: .leading, spacing: 6) {
-                    Text(recipe.name ?? "")
-                        .font(.title2)
-                    
-                    Text(recipe.details ?? "")
-                        .font(.subheadline)
-                        .foregroundColor(.secondary)
-                }
-                .padding(.leading)
+                Text(recipe.details ?? "None")
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
             }
+            .padding(.leading)
         }
     }
 }
 
 struct RecipeListItemView_Previews: PreviewProvider {
     static var previews: some View {
-        RecipeListItemView(recipe: Recipe.example)
+        NavigationView {
+            List {
+                NavigationLink(destination: Text("Grilled Cheese")) {
+                    RecipeListItemView(recipe: Recipe.example)
+                }
+            }
+        }
     }
 }

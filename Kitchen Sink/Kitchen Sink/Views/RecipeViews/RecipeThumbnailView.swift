@@ -27,8 +27,9 @@ struct RecipeThumbnailView: View {
                 .padding(4)
                 .background(
                     Circle()
-                        .foregroundColor(.purple.opacity(0.3))
+                        .foregroundColor(Color(uiColor: UIColor.systemBackground))
                 )
+                .shadow(color: .primary.opacity(0.2), radius: 5)
         } else {
             Image(systemName: "photo")
                 .frame(width: diameter, height: diameter, alignment: .center)
@@ -39,8 +40,9 @@ struct RecipeThumbnailView: View {
                 .padding(4)
                 .background(
                     Circle()
-                        .foregroundColor(.purple.opacity(0.3))
+                        .foregroundColor(Color(uiColor: UIColor.systemBackground))
                 )
+                .shadow(color: .primary.opacity(0.2), radius: 5)
         }
     }
 }
@@ -49,17 +51,25 @@ struct RecipeThumbnailView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             List {
-                ForEach(0..<3) { _ in
-                    RecipeThumbnailView("".data(using: .ascii)!, diameter: 60)
-                        .padding(.vertical)
-                }
+                RecipeThumbnailView("".data(using: .ascii)!, diameter: 60)
+                    .padding(.vertical)
+                
+                RecipeThumbnailView(Recipe.example.image!, diameter: 60)
+                    .padding(.vertical)
+                
+                RecipeThumbnailView("".data(using: .ascii)!, diameter: 60)
+                    .padding(.vertical)
             }
             
             List {
-                ForEach(0..<3) { _ in
-                    RecipeThumbnailView("".data(using: .ascii)!, diameter: 60)
-                        .padding(.vertical)
-                }
+                RecipeThumbnailView("".data(using: .ascii)!, diameter: 60)
+                    .padding(.vertical)
+                
+                RecipeThumbnailView(Recipe.example.image!, diameter: 60)
+                    .padding(.vertical)
+                
+                RecipeThumbnailView("".data(using: .ascii)!, diameter: 60)
+                    .padding(.vertical)
             }
             .preferredColorScheme(.dark)
         }
