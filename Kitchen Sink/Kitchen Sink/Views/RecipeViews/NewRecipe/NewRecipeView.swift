@@ -22,7 +22,15 @@ struct NewRecipeView: View {
             }
             
             Section {
-                Text("Ingredients list here")
+                List(vm.ingredients) { ingredient in
+                    HStack {
+                        Text(ingredient.nameStr)
+                        Spacer()
+                        Divider()
+                        Spacer()
+                        Text(ingredient.quantityStr)
+                    }
+                }
             } header: {
                 HStack {
                     Text("Ingredients")
