@@ -7,45 +7,21 @@
 
 import Foundation
 import CoreData
+import Combine
 
 
-class RecipesViewModel: NSObject, ObservableObject {
+class RecipesViewModel: ObservableObject {
     @Published var recipes: [Recipe] = []
     
-    private let moc: NSManagedObjectContext
+    private let repo: RecipeRepository
     
     init(moc: NSManagedObjectContext = PersistenceController.viewContext) {
-        self.moc = moc
-        super.init()
+        self.repo = RecipeRepository(moc: moc)
         
-        self.fetchRecipes()
-    }
-    
-    private func fetchRecipes() {
-        let req = Recipe.fetchRequest()
-        req.sortDescriptors = []
+        self.repo.fetchedRecipes
+            .receive(on: DispatchQueue.main)
+            .assign(to: &self.$recipes)
         
-        let fetchCtlr = NSFetchedResultsController<Recipe>(
-            fetchRequest: req,
-            managedObjectContext: self.moc,
-            sectionNameKeyPath: nil,
-            cacheName: nil
-        )
-        fetchCtlr.delegate = self
-        
-        do {
-            try fetchCtlr.performFetch()
-            guard let newRecipes = fetchCtlr.fetchedObjects else { return }
-            self.recipes = newRecipes
-        } catch {
-            print("Failed to fetch recipes: \(error.localizedDescription)")
-        }
-    }
-}
-
-extension RecipesViewModel: NSFetchedResultsControllerDelegate {
-    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        guard let newRecipes = controller.fetchedObjects as? [Recipe] else { return }
-        self.recipes = newRecipes
+        try? self.repo.fetchAll()
     }
 }
