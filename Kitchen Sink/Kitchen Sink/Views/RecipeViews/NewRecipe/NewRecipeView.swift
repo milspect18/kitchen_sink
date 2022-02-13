@@ -43,12 +43,16 @@ struct NewRecipeView: View {
 
             Section {
                 List(vm.instructions) { step in
-                    HStack {
-                        Text("Step \(step.stepNum)")
-                        Spacer()
-                        Divider()
-                        Spacer()
-                        Text(step.timeStr)
+                    VStack {
+                        HStack {
+                            Text("Step \(step.stepNum)")
+                            Spacer()
+                            Divider()
+                            Spacer()
+                            Text(step.timeStr)
+                        }
+                        
+                        Text(step.detailsStr)
                     }
                 }
             } header: {
