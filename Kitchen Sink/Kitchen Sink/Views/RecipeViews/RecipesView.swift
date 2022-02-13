@@ -8,17 +8,25 @@
 import SwiftUI
 
 struct RecipesView: View {
-    private let recipe = Recipe(context: PersistenceController.viewContext)
+    @StateObject var vm = RecipesViewModel()
     
     var body: some View {
-        List {
-            RecipeListItemView(recipe: Recipe.example)
+        NavigationView {
+            List {
+                ForEach(vm.recipes) { recipe in
+                    NavigationLink(destination: RecipeDetailView(recipe: recipe)) {
+                        RecipeListItemView(recipe: recipe)
+                            .padding(.vertical)
+                    }
+                }
+            }
+            .navigationTitle("Recipes")
         }
     }
 }
 
 struct RecipesView_Previews: PreviewProvider {
     static var previews: some View {
-        RecipesView()
+        RecipesView(vm: RecipesViewModel(moc: PersistenceController.preview.container.viewContext))
     }
 }
