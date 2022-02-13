@@ -6,11 +6,12 @@
 //
 
 import Foundation
+import CoreData
 import UIKit
 
 extension Recipe {
-    static var example: Recipe {
-        let ctx = PersistenceController.preview.container.viewContext
+    static func example(in moc: NSManagedObjectContext? = nil) -> Recipe {
+        let ctx = moc ?? PersistenceController.preview.container.viewContext
         let recipe = Recipe(context: ctx)
         let imgData = UIImage(named: "grilled_cheese")?.pngData() ?? Data()
         

@@ -34,26 +34,7 @@ extension PersistenceController {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
 
-        let recipe = Recipe(context: viewContext)
-        recipe.name = "Glass of water"
-        recipe.details = "A test meal"
-        recipe.image = nil
-        recipe.timestamp = Date()
-        recipe.recipeId = UUID()
-
-        let ingredient = Ingredient(context: viewContext)
-        ingredient.name = "Water"
-        ingredient.quantity = "1/2 cup"
-        ingredient.recipe = recipe
-
-        let step = CookingStep(context: viewContext)
-        step.recipe = recipe
-        step.stepNum = 0
-        step.time = Int64(TimeInterval(3600.0))
-        step.details = "Pour water into cup"
-
-        let plannedMeal = Meal(context: viewContext)
-        plannedMeal.recipe = recipe
+        let recipe = Recipe.example(in: viewContext)
 
         do {
             try viewContext.save()
