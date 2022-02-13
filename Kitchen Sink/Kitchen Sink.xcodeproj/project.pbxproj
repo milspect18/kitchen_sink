@@ -10,6 +10,7 @@
 		E30E850727B7136A00A26839 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E30E850627B7136A00A26839 /* CloudKit.framework */; };
 		E334EEC727B70893009C47B2 /* Recipe+CDHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E334EEC627B70893009C47B2 /* Recipe+CDHelpers.swift */; };
 		E343462527B96499006D97B6 /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E343462427B96499006D97B6 /* RecipeDetailView.swift */; };
+		E343462727B9AC94006D97B6 /* RecipeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E343462627B9AC94006D97B6 /* RecipeRepository.swift */; };
 		E368A8EA27B6E49B00216E53 /* Kitchen_SinkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E368A8E927B6E49B00216E53 /* Kitchen_SinkApp.swift */; };
 		E368A8EC27B6E49B00216E53 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E368A8EB27B6E49B00216E53 /* ContentView.swift */; };
 		E368A8EE27B6E49C00216E53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E368A8ED27B6E49C00216E53 /* Assets.xcassets */; };
@@ -48,6 +49,7 @@
 		E30E850627B7136A00A26839 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		E334EEC627B70893009C47B2 /* Recipe+CDHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recipe+CDHelpers.swift"; sourceTree = "<group>"; };
 		E343462427B96499006D97B6 /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
+		E343462627B9AC94006D97B6 /* RecipeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRepository.swift; sourceTree = "<group>"; };
 		E368A8E627B6E49B00216E53 /* Kitchen Sink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kitchen Sink.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E368A8E927B6E49B00216E53 /* Kitchen_SinkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kitchen_SinkApp.swift; sourceTree = "<group>"; };
 		E368A8EB27B6E49B00216E53 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				E334EEC627B70893009C47B2 /* Recipe+CDHelpers.swift */,
+				E343462627B9AC94006D97B6 /* RecipeRepository.swift */,
 			);
 			path = Recipe;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				E343462527B96499006D97B6 /* RecipeDetailView.swift in Sources */,
 				E368A92827B704EE00216E53 /* RecipeThumbnailView.swift in Sources */,
 				E368A8EA27B6E49B00216E53 /* Kitchen_SinkApp.swift in Sources */,
+				E343462727B9AC94006D97B6 /* RecipeRepository.swift in Sources */,
 				E368A92027B7036300216E53 /* RecipesView.swift in Sources */,
 				E368A8F627B6E49C00216E53 /* Kitchen-Sink.xcdatamodeld in Sources */,
 			);
