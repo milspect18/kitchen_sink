@@ -33,7 +33,7 @@ struct RecipeListItemView_Previews: PreviewProvider {
         NavigationView {
             List {
                 NavigationLink(destination: Text("Grilled Cheese")) {
-                    RecipeListItemView(recipe: Recipe.example)
+                    RecipeListItemView(recipe: Recipe.example())
                 }
             }
         }

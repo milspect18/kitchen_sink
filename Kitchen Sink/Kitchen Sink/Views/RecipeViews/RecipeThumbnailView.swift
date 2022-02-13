@@ -54,7 +54,7 @@ struct RecipeThumbnailView_Previews: PreviewProvider {
                 RecipeThumbnailView("".data(using: .ascii)!, diameter: 60)
                     .padding(.vertical)
                 
-                RecipeThumbnailView(Recipe.example.image!, diameter: 60)
+                RecipeThumbnailView(Recipe.example().image!, diameter: 60)
                     .padding(.vertical)
                 
                 RecipeThumbnailView("".data(using: .ascii)!, diameter: 60)
@@ -65,7 +65,7 @@ struct RecipeThumbnailView_Previews: PreviewProvider {
                 RecipeThumbnailView("".data(using: .ascii)!, diameter: 60)
                     .padding(.vertical)
                 
-                RecipeThumbnailView(Recipe.example.image!, diameter: 60)
+                RecipeThumbnailView(Recipe.example().image!, diameter: 60)
                     .padding(.vertical)
                 
                 RecipeThumbnailView("".data(using: .ascii)!, diameter: 60)
