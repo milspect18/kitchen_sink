@@ -39,6 +39,7 @@ struct NewRecipeView: View {
                     NavigationLink(destination: Text("Add ingredient")) {
                         Text("Add")
                     }
+                    .disabled(vm.saveDisabled)
                 }
             }
 
@@ -63,6 +64,7 @@ struct NewRecipeView: View {
                     NavigationLink(destination: Text("Add step")) {
                         Text("Add")
                     }
+                    .disabled(vm.saveDisabled)
                 }
             }
         }
