@@ -15,7 +15,9 @@ class NewRecipeViewModel: ObservableObject {
     @Published var imgData: Data? = nil
     @Published var ingredients: [Ingredient] = []
     @Published var instructions: [CookingStep] = []
-    @Published var saveError: Error? = nil
+    @Published var inError: Bool = false
+    
+    var lastError: Error? = nil
     
     private var moc: NSManagedObjectContext
     
@@ -30,7 +32,28 @@ class NewRecipeViewModel: ObservableObject {
             self.createNewRecipe()
             try self.moc.save()
         } catch {
-            self.saveError = error
+            self.lastError = error
+        }
+    }
+    
+    func newIngredient(_ name: String, _ quantity: String) {
+        let ingredient = Ingredient(context: self.moc)
+        ingredient.name = name
+        ingredient.quantity = quantity
+        
+        self.ingredients.append(ingredient)
+    }
+    
+    func deleteIngredients(offsets: IndexSet) {
+        for idx in offsets.reversed() {
+            self.moc.delete(self.ingredients[idx])
+            self.ingredients.remove(at: idx)
+        }
+        
+        do {
+            try self.moc.save()
+        } catch {
+            self.lastError = error
         }
     }
     
@@ -39,7 +62,20 @@ class NewRecipeViewModel: ObservableObject {
         
         recipe.name = self.name
         recipe.details = self.details
-        recipe.ingredients = NSSet(array: self.ingredients)
-        recipe.steps = NSSet(array: self.instructions)
+        
+        self.linkIngredients(to: recipe)
+        self.linkSteps(to: recipe)
+    }
+    
+    private func linkIngredients(to recipe: Recipe) {
+        for ingredient in self.ingredients {
+            ingredient.recipe = recipe
+        }
+    }
+    
+    private func linkSteps(to recipe: Recipe) {
+        for step in self.instructions {
+            step.recipe = recipe
+        }
     }
 }

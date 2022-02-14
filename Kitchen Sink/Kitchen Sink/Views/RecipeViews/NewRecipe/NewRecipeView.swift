@@ -23,20 +23,22 @@ struct NewRecipeView: View {
             }
             
             Section {
-                List(vm.ingredients) { ingredient in
-                    HStack {
-                        Text(ingredient.nameStr)
-                        Spacer()
-                        Divider()
-                        Spacer()
-                        Text(ingredient.quantityStr)
+                List {
+                    ForEach(vm.ingredients) { ingredient in
+                        HStack {
+                            Text(ingredient.nameStr)
+                            Spacer()
+                            Text(ingredient.quantityStr)
+                                .padding(.horizontal)
+                        }
                     }
+                    .onDelete(perform: vm.deleteIngredients)
                 }
             } header: {
                 HStack {
                     Text("Ingredients")
                     Spacer()
-                    NavigationLink(destination: Text("Add ingredient")) {
+                    NavigationLink(destination: AddIngredientView(onAdd: vm.newIngredient)) {
                         Text("Add")
                     }
                     .disabled(vm.saveDisabled)
