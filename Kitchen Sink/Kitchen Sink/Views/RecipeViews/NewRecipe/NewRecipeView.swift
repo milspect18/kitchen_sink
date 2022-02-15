@@ -60,22 +60,17 @@ struct NewRecipeView: View {
                             Divider()
                             
                             Text(step.detailsStr)
+                                .lineLimit(5)
                                 .padding(.vertical, 8)
+                                .fixedSize(horizontal: false, vertical: true)
                         }
                         .padding(.vertical, 16)
                         .listRowSeparator(.hidden)
                         .listRowBackground(
-                            GeometryReader { geo in
-                                ZStack {
-                                    Rectangle()
-                                        .foregroundColor(.systemGroupedBckgnd)
-                                    
-                                    Rectangle()
-                                        .foregroundColor(.secondarySystemGroupedBckgnd)
-                                        .frame(width: geo.size.width, height: geo.size.height - 16)
-                                        .cornerRadius(12)
-                                }
-                            }
+                            Rectangle()
+                                .foregroundColor(.secondarySystemGroupedBckgnd)
+                                .cornerRadius(12)
+                                .padding(.vertical, 6)
                         )
                     }
                     .onDelete(perform: vm.deleteSteps)
