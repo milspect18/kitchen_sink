@@ -13,6 +13,20 @@ struct NewRecipeView: View {
     
     var body: some View {
         Form {
+            HStack {
+                Spacer()
+                
+                Button {
+                    vm.showImagePicker = true
+                } label: {
+                    RecipeThumbnailView(vm.imgData, diameter: 150)
+                }
+
+                Spacer()
+            }
+            .listRowBackground(Color.systemGroupedBckgnd)
+            .padding(.top, 24)
+            
             Section("Name:") {
                 TextField("Recipe name", text: $vm.name)
             }
@@ -94,6 +108,11 @@ struct NewRecipeView: View {
                     dismiss()
                 }
                 .disabled(vm.saveDisabled)
+            }
+        }
+        .sheet(isPresented: $vm.showImagePicker) {
+            ImageDataPicker(imageData: $vm.imgData) { error in
+                print(error.localizedDescription)
             }
         }
     }

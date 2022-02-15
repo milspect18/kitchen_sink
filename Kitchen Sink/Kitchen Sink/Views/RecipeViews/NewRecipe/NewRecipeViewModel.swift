@@ -12,9 +12,10 @@ import CoreData
 class NewRecipeViewModel: ObservableObject {
     @Published var name: String = ""
     @Published var details: String = ""
-    @Published var imgData: Data? = nil
+    @Published var imgData: Data = Data()
     @Published var ingredients: [Ingredient] = []
     @Published var instructions: [CookingStep] = []
+    @Published var showImagePicker: Bool = false
     @Published var inError: Bool = false
     
     var lastError: Error? = nil
@@ -84,6 +85,9 @@ class NewRecipeViewModel: ObservableObject {
         
         recipe.name = self.name
         recipe.details = self.details
+        recipe.image = self.imgData
+        recipe.timestamp = Date()
+        recipe.recipeId = UUID()
         
         self.linkIngredients(to: recipe)
         self.linkSteps(to: recipe)
