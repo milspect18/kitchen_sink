@@ -11,8 +11,7 @@ struct RecipeListItemView: View {
     let recipe: Recipe
     
     var body: some View {
-        print(recipe)
-        return HStack {
+        HStack {
             RecipeThumbnailView(recipe.image ?? Data(), diameter: 60)
             
             VStack(alignment: .leading, spacing: 4) {
