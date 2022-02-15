@@ -33,6 +33,7 @@
 		E368A92827B704EE00216E53 /* RecipeThumbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E368A92727B704EE00216E53 /* RecipeThumbnailView.swift */; };
 		E3CA5C8427BC374200112D81 /* Color+AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CA5C8327BC374200112D81 /* Color+AppColors.swift */; };
 		E3CA5C8927BC56B400112D81 /* ImageDataPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CA5C8827BC56B400112D81 /* ImageDataPicker.swift */; };
+		E3CA5C8B27BC5C1700112D81 /* TimeInterval+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CA5C8A27BC5C1700112D81 /* TimeInterval+Extensions.swift */; };
 		E3DEEE2027B94E12009F10E8 /* RecipesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DEEE1F27B94E12009F10E8 /* RecipesViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +84,7 @@
 		E368A92727B704EE00216E53 /* RecipeThumbnailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeThumbnailView.swift; sourceTree = "<group>"; };
 		E3CA5C8327BC374200112D81 /* Color+AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+AppColors.swift"; sourceTree = "<group>"; };
 		E3CA5C8827BC56B400112D81 /* ImageDataPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataPicker.swift; sourceTree = "<group>"; };
+		E3CA5C8A27BC5C1700112D81 /* TimeInterval+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Extensions.swift"; sourceTree = "<group>"; };
 		E3DEEE1E27B72E2C009F10E8 /* Kitchen-Sink-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Kitchen-Sink-Info.plist"; sourceTree = SOURCE_ROOT; };
 		E3DEEE1F27B94E12009F10E8 /* RecipesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -282,6 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				E3CA5C8327BC374200112D81 /* Color+AppColors.swift */,
+				E3CA5C8A27BC5C1700112D81 /* TimeInterval+Extensions.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -431,6 +434,7 @@
 				E368A92627B7041B00216E53 /* RecipeListItemView.swift in Sources */,
 				E3DEEE2027B94E12009F10E8 /* RecipesViewModel.swift in Sources */,
 				E343463727B9F349006D97B6 /* AddInstructionView.swift in Sources */,
+				E3CA5C8B27BC5C1700112D81 /* TimeInterval+Extensions.swift in Sources */,
 				E343463327B9C1E2006D97B6 /* CookingStep+CDHelpers.swift in Sources */,
 				E368A8EC27B6E49B00216E53 /* ContentView.swift in Sources */,
 				E3CA5C8427BC374200112D81 /* Color+AppColors.swift in Sources */,

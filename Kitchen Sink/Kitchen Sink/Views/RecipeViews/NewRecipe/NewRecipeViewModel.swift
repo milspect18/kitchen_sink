@@ -9,13 +9,6 @@ import Foundation
 import CoreData
 
 
-extension TimeInterval {
-    static func FromMinutes(_ minutes: Double) -> TimeInterval {
-        return TimeInterval(minutes * 60)
-    }
-}
-
-
 class NewRecipeViewModel: ObservableObject {
     @Published var name: String = ""
     @Published var details: String = ""
