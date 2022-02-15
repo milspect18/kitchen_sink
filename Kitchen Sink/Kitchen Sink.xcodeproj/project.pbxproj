@@ -32,6 +32,7 @@
 		E368A92627B7041B00216E53 /* RecipeListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E368A92527B7041B00216E53 /* RecipeListItemView.swift */; };
 		E368A92827B704EE00216E53 /* RecipeThumbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E368A92727B704EE00216E53 /* RecipeThumbnailView.swift */; };
 		E3CA5C8427BC374200112D81 /* Color+AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CA5C8327BC374200112D81 /* Color+AppColors.swift */; };
+		E3CA5C8927BC56B400112D81 /* ImageDataPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CA5C8827BC56B400112D81 /* ImageDataPicker.swift */; };
 		E3DEEE2027B94E12009F10E8 /* RecipesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DEEE1F27B94E12009F10E8 /* RecipesViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +82,7 @@
 		E368A92527B7041B00216E53 /* RecipeListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListItemView.swift; sourceTree = "<group>"; };
 		E368A92727B704EE00216E53 /* RecipeThumbnailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeThumbnailView.swift; sourceTree = "<group>"; };
 		E3CA5C8327BC374200112D81 /* Color+AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+AppColors.swift"; sourceTree = "<group>"; };
+		E3CA5C8827BC56B400112D81 /* ImageDataPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataPicker.swift; sourceTree = "<group>"; };
 		E3DEEE1E27B72E2C009F10E8 /* Kitchen-Sink-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Kitchen-Sink-Info.plist"; sourceTree = SOURCE_ROOT; };
 		E3DEEE1F27B94E12009F10E8 /* RecipesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -218,6 +220,7 @@
 		E368A91827B6EC1F00216E53 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E3CA5C8527BC567700112D81 /* ImagePicker */,
 				E368A92127B7038F00216E53 /* MealPlanningViews */,
 				E368A91E27B7032200216E53 /* RecipeViews */,
 				E368A8EB27B6E49B00216E53 /* ContentView.swift */,
@@ -281,6 +284,14 @@
 				E3CA5C8327BC374200112D81 /* Color+AppColors.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		E3CA5C8527BC567700112D81 /* ImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				E3CA5C8827BC56B400112D81 /* ImageDataPicker.swift */,
+			);
+			path = ImagePicker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -429,6 +440,7 @@
 				E343463527B9E4E2006D97B6 /* AddIngredientView.swift in Sources */,
 				E368A92827B704EE00216E53 /* RecipeThumbnailView.swift in Sources */,
 				E368A8EA27B6E49B00216E53 /* Kitchen_SinkApp.swift in Sources */,
+				E3CA5C8927BC56B400112D81 /* ImageDataPicker.swift in Sources */,
 				E343462727B9AC94006D97B6 /* RecipeRepository.swift in Sources */,
 				E343462A27B9B84E006D97B6 /* NewRecipeView.swift in Sources */,
 				E368A92027B7036300216E53 /* RecipesView.swift in Sources */,
