@@ -46,24 +46,45 @@ struct NewRecipeView: View {
             }
 
             Section {
-                List(vm.instructions) { step in
-                    VStack {
-                        HStack {
-                            Text("Step \(step.stepNum)")
-                            Spacer()
+                List {
+                    ForEach(vm.instructions) { step in
+                        VStack(alignment: .leading) {
+                            HStack {
+                                Text("Step \(step.stepNum + 1)")
+                                Divider()
+                                    .padding(.horizontal, 16)
+                                Text(step.timeStr)
+                            }
+                            .padding(.top, 6)
+                            
                             Divider()
-                            Spacer()
-                            Text(step.timeStr)
+                            
+                            Text(step.detailsStr)
+                                .padding(.vertical, 8)
                         }
-                        
-                        Text(step.detailsStr)
+                        .padding(.vertical, 16)
+                        .listRowSeparator(.hidden)
+                        .listRowBackground(
+                            GeometryReader { geo in
+                                ZStack {
+                                    Rectangle()
+                                        .foregroundColor(.systemGroupedBckgnd)
+                                    
+                                    Rectangle()
+                                        .foregroundColor(.secondarySystemGroupedBckgnd)
+                                        .frame(width: geo.size.width, height: geo.size.height - 16)
+                                        .cornerRadius(12)
+                                }
+                            }
+                        )
                     }
+                    .onDelete(perform: vm.deleteSteps)
                 }
             } header: {
                 HStack {
                     Text("Instructions")
                     Spacer()
-                    NavigationLink(destination: Text("Add step")) {
+                    NavigationLink(destination: AddInstructionView(onAdd: vm.newStep)) {
                         Text("Add")
                     }
                     .disabled(vm.saveDisabled)

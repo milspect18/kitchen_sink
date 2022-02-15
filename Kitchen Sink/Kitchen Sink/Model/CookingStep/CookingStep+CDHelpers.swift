@@ -10,5 +10,12 @@ import Foundation
 
 extension CookingStep {
     var detailsStr: String { self.details ?? "" }
-    var timeStr: String { DateComponentsFormatter().string(from: self.time) ?? "" }
+    var timeStr: String {
+        let formatter = DateComponentsFormatter()
+        
+        formatter.unitsStyle = .brief
+        formatter.allowedUnits = .minute
+        
+        return formatter.string(from: self.time) ?? ""
+    }
 }

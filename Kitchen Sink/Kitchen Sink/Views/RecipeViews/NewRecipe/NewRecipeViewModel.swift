@@ -9,6 +9,13 @@ import Foundation
 import CoreData
 
 
+extension TimeInterval {
+    static func FromMinutes(_ minutes: Double) -> TimeInterval {
+        return TimeInterval(minutes * 60)
+    }
+}
+
+
 class NewRecipeViewModel: ObservableObject {
     @Published var name: String = ""
     @Published var details: String = ""
@@ -48,6 +55,28 @@ class NewRecipeViewModel: ObservableObject {
         for idx in offsets.reversed() {
             self.moc.delete(self.ingredients[idx])
             self.ingredients.remove(at: idx)
+        }
+        
+        do {
+            try self.moc.save()
+        } catch {
+            self.lastError = error
+        }
+    }
+    
+    func newStep(_ time: Double, _ details: String) {
+        let step = CookingStep(context: self.moc)
+        step.time = TimeInterval.FromMinutes(time)
+        step.details = details
+        step.stepNum = Int32(self.instructions.endIndex)
+        
+        self.instructions.append(step)
+    }
+    
+    func deleteSteps(offsets: IndexSet) {
+        for idx in offsets.reversed() {
+            self.moc.delete(self.instructions[idx])
+            self.instructions.remove(at: idx)
         }
         
         do {

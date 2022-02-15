@@ -16,6 +16,7 @@
 		E343462F27B9C115006D97B6 /* Ingredient+CDHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E343462E27B9C115006D97B6 /* Ingredient+CDHelpers.swift */; };
 		E343463327B9C1E2006D97B6 /* CookingStep+CDHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E343463227B9C1E2006D97B6 /* CookingStep+CDHelpers.swift */; };
 		E343463527B9E4E2006D97B6 /* AddIngredientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E343463427B9E4E2006D97B6 /* AddIngredientView.swift */; };
+		E343463727B9F349006D97B6 /* AddInstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E343463627B9F349006D97B6 /* AddInstructionView.swift */; };
 		E368A8EA27B6E49B00216E53 /* Kitchen_SinkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E368A8E927B6E49B00216E53 /* Kitchen_SinkApp.swift */; };
 		E368A8EC27B6E49B00216E53 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E368A8EB27B6E49B00216E53 /* ContentView.swift */; };
 		E368A8EE27B6E49C00216E53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E368A8ED27B6E49C00216E53 /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 		E368A92327B703A100216E53 /* MealPlanningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E368A92227B703A100216E53 /* MealPlanningView.swift */; };
 		E368A92627B7041B00216E53 /* RecipeListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E368A92527B7041B00216E53 /* RecipeListItemView.swift */; };
 		E368A92827B704EE00216E53 /* RecipeThumbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E368A92727B704EE00216E53 /* RecipeThumbnailView.swift */; };
+		E3CA5C8427BC374200112D81 /* Color+AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CA5C8327BC374200112D81 /* Color+AppColors.swift */; };
 		E3DEEE2027B94E12009F10E8 /* RecipesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DEEE1F27B94E12009F10E8 /* RecipesViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +62,7 @@
 		E343462E27B9C115006D97B6 /* Ingredient+CDHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ingredient+CDHelpers.swift"; sourceTree = "<group>"; };
 		E343463227B9C1E2006D97B6 /* CookingStep+CDHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CookingStep+CDHelpers.swift"; sourceTree = "<group>"; };
 		E343463427B9E4E2006D97B6 /* AddIngredientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIngredientView.swift; sourceTree = "<group>"; };
+		E343463627B9F349006D97B6 /* AddInstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInstructionView.swift; sourceTree = "<group>"; };
 		E368A8E627B6E49B00216E53 /* Kitchen Sink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kitchen Sink.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E368A8E927B6E49B00216E53 /* Kitchen_SinkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kitchen_SinkApp.swift; sourceTree = "<group>"; };
 		E368A8EB27B6E49B00216E53 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -77,6 +80,7 @@
 		E368A92227B703A100216E53 /* MealPlanningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPlanningView.swift; sourceTree = "<group>"; };
 		E368A92527B7041B00216E53 /* RecipeListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListItemView.swift; sourceTree = "<group>"; };
 		E368A92727B704EE00216E53 /* RecipeThumbnailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeThumbnailView.swift; sourceTree = "<group>"; };
+		E3CA5C8327BC374200112D81 /* Color+AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+AppColors.swift"; sourceTree = "<group>"; };
 		E3DEEE1E27B72E2C009F10E8 /* Kitchen-Sink-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Kitchen-Sink-Info.plist"; sourceTree = SOURCE_ROOT; };
 		E3DEEE1F27B94E12009F10E8 /* RecipesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -130,6 +134,7 @@
 				E343462927B9B84E006D97B6 /* NewRecipeView.swift */,
 				E343462B27B9B85C006D97B6 /* NewRecipeViewModel.swift */,
 				E343463427B9E4E2006D97B6 /* AddIngredientView.swift */,
+				E343463627B9F349006D97B6 /* AddInstructionView.swift */,
 			);
 			path = NewRecipe;
 			sourceTree = "<group>";
@@ -174,6 +179,7 @@
 		E368A8E827B6E49B00216E53 /* Kitchen Sink */ = {
 			isa = PBXGroup;
 			children = (
+				E3CA5C8227BC373200112D81 /* Util */,
 				E3DEEE1E27B72E2C009F10E8 /* Kitchen-Sink-Info.plist */,
 				E368A91B27B6EC4600216E53 /* Resources */,
 				E368A91A27B6EC2F00216E53 /* App */,
@@ -267,6 +273,14 @@
 				E368A92227B703A100216E53 /* MealPlanningView.swift */,
 			);
 			path = MealPlanningViews;
+			sourceTree = "<group>";
+		};
+		E3CA5C8227BC373200112D81 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				E3CA5C8327BC374200112D81 /* Color+AppColors.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -405,8 +419,10 @@
 				E343462F27B9C115006D97B6 /* Ingredient+CDHelpers.swift in Sources */,
 				E368A92627B7041B00216E53 /* RecipeListItemView.swift in Sources */,
 				E3DEEE2027B94E12009F10E8 /* RecipesViewModel.swift in Sources */,
+				E343463727B9F349006D97B6 /* AddInstructionView.swift in Sources */,
 				E343463327B9C1E2006D97B6 /* CookingStep+CDHelpers.swift in Sources */,
 				E368A8EC27B6E49B00216E53 /* ContentView.swift in Sources */,
+				E3CA5C8427BC374200112D81 /* Color+AppColors.swift in Sources */,
 				E368A92327B703A100216E53 /* MealPlanningView.swift in Sources */,
 				E368A91D27B701CA00216E53 /* MealCategory.swift in Sources */,
 				E343462527B96499006D97B6 /* RecipeDetailView.swift in Sources */,
