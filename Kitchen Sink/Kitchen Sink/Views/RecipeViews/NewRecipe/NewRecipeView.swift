@@ -10,6 +10,8 @@ import SwiftUI
 struct NewRecipeView: View {
     @Environment(\.dismiss) private var dismiss
     @StateObject var vm = NewRecipeViewModel()
+    @FocusState var nameFocused: Bool
+    @FocusState var detailsFocused: Bool
     
     var body: some View {
         Form {
@@ -17,6 +19,8 @@ struct NewRecipeView: View {
                 Spacer()
                 
                 Button {
+                    nameFocused = false
+                    detailsFocused = false
                     vm.showImagePicker = true
                 } label: {
                     RecipeThumbnailView(vm.imgData, diameter: 150)
@@ -29,10 +33,12 @@ struct NewRecipeView: View {
             
             Section("Name:") {
                 TextField("Recipe name", text: $vm.name)
+                    .focused($nameFocused)
             }
              
             Section("Description:") {
                 TextEditor(text: $vm.details)
+                    .focused($detailsFocused)
                     .frame(minHeight: 100)
             }
             
@@ -109,6 +115,10 @@ struct NewRecipeView: View {
                 }
                 .disabled(vm.saveDisabled)
             }
+        }
+        .onDisappear {
+            nameFocused = false
+            detailsFocused = false
         }
         .sheet(isPresented: $vm.showImagePicker) {
             ImageDataPicker(imageData: $vm.imgData) { error in
